@@ -25,7 +25,6 @@ int main(){
 	 * Basically, osu! calculates actual ApproachTime(or "PreEmpt" by peppy) each time when it loads a map.
 	 * (int PreEmpt = (int)SomeCalculation(Beatmap->ApproachRate, min, mid, max); )
 	 * And this program patch the code where osu! does the truncation. (from double to int)
-	 * 
 	 */
 	byte oPattern[] = { 0x00 ,0x0F ,0x10 ,0x45 ,0xE0 ,0xF2 ,0x0F ,0x2C ,0xC0 ,0x89 ,0x46 ,0x1C };
 	byte patch[] = { 0xC7 ,0x46 ,0x1C ,0x00 ,0x00 ,0x00 ,0x00 };
